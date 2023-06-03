@@ -1,0 +1,664 @@
+/*############# GENERAL CSS #############*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@400;500;700;800;900&display=swap');
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+}
+
+:root {
+
+    /************** text colors *************/
+    --primary-color: #9f92ec;
+    --secondary-color: #6b00b3;
+    --dark-purple-color: #1d1622;
+    --light-purple-color: #f3eafa;
+    --light-color: #CCCCCC;
+    --black-color: #000;
+    --white-color: #fff;
+    --box-shadow: 0.1rem -0.07rem 1.5rem 0.3rem rgb(0 0 0 / 30%);
+
+    /************** font-family **************/
+    --primary-font: 'Lato', sans-serif;
+    --secondary-font: 'Montserrat', sans-serif;
+}
+
+body,
+html {
+    font-size: 10px;
+    font-weight: 400;
+    font-family: var(--primary-font);
+    background-color: var(--dark-purple-color);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    line-height: 1.5;
+}
+
+hr {
+    margin: 0 auto;
+    border: none;
+    width: 65%;
+    align-items: center;
+    background-color: var(--light-purple-color);
+}
+
+h1 {
+    color: var(--light-purple-color);
+    font-size: 5.5rem;
+    font-weight: 800;
+    font-family: var(--secondary-font);
+    display: inline-block;
+    text-transform: uppercase;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+}
+
+h1 span{
+    color: var(--light-purple-color);
+}
+
+h2 {
+    color: var(--white-color);
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: var(--secondary-font);
+    display: inline-block;
+    text-transform: uppercase;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+}
+
+h2 span {
+    color: var(--primary-color);
+}
+
+h3 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.3;
+    font-family: var(--secondary-font);
+    color: var(--dark-purple-color);
+    margin-bottom: 1rem;
+}
+
+h4 {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1;
+    font-family: var(--secondary-font);
+    color: var(--light-purple-color);
+    margin-bottom: 2rem;
+}
+
+h5 {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: var(--dark-purple-color);
+    font-family: var(--secondary-font);
+    margin-bottom: 0.9375rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+    color: var(--light-purple-color);
+}
+
+a,
+a:active,
+a:focus,
+a:hover,
+.btn:focus {
+    text-decoration: none;
+    box-shadow: none;
+    outline: 0;
+}
+
+.bg-black {
+    background-color: var(--black-color);
+}
+
+.main-btn {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    border-radius: 5rem;
+    text-transform: capitalize;
+    padding: 0.9rem 3rem;
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    transition: all .3s linear;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+}
+
+.main-btn:hover {
+    background: var(--secondary-color);
+    color: var(--white-color);
+}
+
+.view-link {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    color: var(--white-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.view-link:hover {
+    color: var(--white-color);
+    font-size: 1.6rem;
+}
+
+
+.wrapper {
+    padding: 7rem 0;
+}
+
+.sec-title h1 {
+    position: relative;
+}
+
+.sec-title h1::after {
+    position: absolute;
+    content: '';
+    background-color: var(--primary-color);
+    width: 50%;
+    height: 50%;
+    right: -4px;
+    bottom: 0%;
+    opacity: 0.5;
+}
+
+
+
+
+
+/*############ 01 NAVBAR CSS ############*/
+.header {
+    background-color: var(--dark-purple-color);
+    padding: 1rem 0;
+}
+
+.header .navbar-brand img {
+    width: 40px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.header .navbar-nav .nav-link {
+    color: var(--white-color);
+    font-family: var(--secondary-font);
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 0.5rem 2rem;
+    margin: 0px 0.2rem;
+}
+
+/************* dropdown menu *************/
+.header .dropdown-menu {
+    min-width: 13rem;
+    padding: 1.5rem 0;
+    background-color: var(--dark-purple-color);
+    border: 0.2rem solid var(--dark-purple-color);
+}
+
+.header .dropdown-item {
+    line-height: 1.3;
+    padding: 1rem;
+    font-size: 1.3rem;
+    color: var(--white-color);
+    font-weight: 600;
+    font-family: var(--secondary-font);
+}
+
+.dropdown-toggle::after {
+    content: "+";
+    border: none;
+    vertical-align: middle;
+    font-size: 1.6rem;
+}
+
+.nav-item:hover>.dropdown-toggle::after,
+.nav-link.dropdown-toggle.show {
+    color: var(--primary-color);
+}
+
+.header .navbar-nav .nav-link.active {
+    color: var(--primary-color);
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover,
+.header .navbar-nav .nav-link:hover {
+    color: var(--primary-color);
+    background-color: transparent;
+}
+
+.navbar-nav li:hover>ul.dropdown-menu {
+    display: block;
+}
+
+.header .navbar-toggler {
+    color: var(--white-color);
+    font-size: 2rem;
+    height: 2.7rem;
+    padding: 0;
+}
+
+.header .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/************  BANNER SECTION ***********/
+.banner-wrapper {
+    margin-top: 8rem;
+    background-image: url('../images/banner/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+    padding-top: 10rem;
+
+}
+
+
+
+
+
+/*########### PARALLAX EFFECT ###########*/
+.parallax {
+    position: relative;
+    background-position: left;
+    background-size: 48%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: inline-block;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.parallax-1 {
+    position: relative;
+    background-position: right;
+    background-size: 48%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: inline-block;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.parallax-main {
+    position: relative;
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: inline-block;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.parallax.img1 {
+    background-image: url('../images/banner/banner-1.png');
+    height: 100%;
+}
+
+.parallax.img2 {
+    background-image: url('../images/feature/webtec.png');
+    height: 608px;
+}
+
+.parallax.img3 {
+    background-image: url('../images/feature/html.png');
+    height: 608px;
+}
+
+.parallax.img4 {
+    background-image: url('../images/feature/css.png');
+    height: 608px;
+}
+
+.parallax.img5 {
+    background-image: url('../images/feature/js.png');
+    height: 608px;
+}
+
+
+
+
+
+/**########## BLOG SECTION CSS *##########*/
+.blog-wrapper {
+    background: var(--dark-purple-color);
+    margin-top: 5rem;
+}
+
+
+
+
+
+/*############## ABOUT CSS ##############*/
+.main-wrapper {
+    margin-top: 80vh;
+    background-color: var(--dark-purple-color);
+    width: 100%;
+}
+
+.main-wrapper .purple-card {
+    position: absolute;
+    top: 25%;
+    left: -400px;
+    width: calc(100% - 20%);
+    box-shadow: var(--box-shadow);
+    border-radius: 2.5rem;
+    background-color: var(--primary-color);
+    padding: 2.5rem;
+    text-align: left;
+    z-index: 1;
+}
+
+.main-wrapper .purple-card.right {
+    right: -400px;
+    left: unset;
+}
+
+
+
+
+/* ====================================
+----------- FEATURE PAGE CSS ----------
+====================================== */
+.parallax.f-img1 {
+    background-image: url('../images/feature/feature-header.png');
+    height: 100%;
+}
+
+.webtec-feature .card-detail {
+    box-shadow: var(--box-shadow);
+    background-color: var(--black-color);
+    border-radius: 2rem;
+    padding: 3rem;
+    margin-top: -2rem;
+}
+
+.webtec-feature .card-detail h5 {
+    font-weight: 800;
+    font-family: var(--secondary-font);
+}
+
+
+
+
+/* ====================================
+------------ BLOG PAGE CSS ------------
+====================================== */
+.parallax.b-img {
+    background-image: url('../images/blog/blog-header.png');
+    height: 100%;
+}
+
+/************** carousel **************/
+/* Carousel container */
+.carousel {
+    position: relative;
+}
+  
+/* Carousel items */
+.carousel-item img {
+    width: 80%;
+    height: 50%;
+}
+  
+/* Carousel captions */
+.carousel-caption {
+    position: absolute;
+    text-align: center; 
+}
+
+.carousel h4{
+    padding-top: 5rem;
+}
+.carousel p {
+    text-align: left;
+    padding-bottom: 3rem;
+
+}
+  
+/* Carousel indicators */
+.carousel-indicators {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--light-purple-color);
+    opacity: 0.5;
+    margin: 0 6px;
+    padding: 0;
+    cursor: pointer;
+}
+  
+.carousel-indicators button.active {
+    background-color: var(--secondary-color);
+    opacity: 1;
+}
+  
+/* Carousel control buttons */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--dark-purple-color);
+    border: none;
+    outline: none;
+    color: var(--light-purple-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+  
+.carousel-control-prev {
+    left: 1rem;
+}
+ 
+.carousel-control-next {
+    right: 1rem;
+}
+
+
+  
+  
+  
+
+
+
+
+/*=====================================
+----------- ABOUT PAGE CSS ------------
+=======================================*/
+.parallax.a-img {
+    background-image: url('../images/about/about-header.png');
+    height: 100%;
+}
+
+.parallax.a-img2{
+    background-image: url('../images/about/me.png');
+    height: 70rem;
+}
+
+
+/* ====================================
+--------- GET IN TOUCH CSS ------------
+====================================== */
+.about .main-wrapper{
+    padding-bottom: 25rem;
+}
+
+.about .get-in-touch .card {
+    background-color: var(--primary-color);
+    min-height: 36rem;
+    padding: 3rem;
+    border-radius: 2rem;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+
+.about .card i {
+    font-size: 8rem;
+    margin-bottom: 3rem;
+    color: var(--dark-purple-color);
+}
+
+.about .card h4 {
+    font-weight: 800;
+    color: var(--light-purple-color);
+    text-align: center;
+}
+
+.about .card p {
+    color: var(--dark-purple-color);
+}
+
+.about .card p:last-child {
+    font-family: var(--secondary-font);
+    font-weight: 700;
+}
+
+/* ====================================
+---------- COMMENT FORM CSS -----------
+====================================== */
+.form-section {
+    padding: 10rem;
+    background-color: var(--light-purple-color);
+    box-shadow: var(--box-shadow);
+    border-radius: 2rem;
+}
+
+.form-section .form-control:focus {
+    box-shadow: none;
+    border-color: var(--dark-purple-color);
+
+}
+
+.form-section input.form-control {
+    height: 4.5rem;
+    border: 0.1rem solid var(--light-color);
+    font-size: 1.5rem;
+}
+
+.form-section textarea {
+    border: 0.1rem solid var(--light-color);
+    font-size: 1.5rem;
+}
+
+.comment-section {
+    padding: 4rem;
+    font-size: medium;
+    background-color: var(--dark-purple-color);
+    box-shadow: var(--box-shadow);
+    border-radius: 1rem;
+}
+
+.comment-section h5, h4, h3{
+    color: var(--light-purple-color);
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+/*########## FOOTER CSS ##########*/
+.footer_wrapper {
+    background-color: var(--dark-purple-color);
+    padding-top: 5rem;
+    padding-bottom: 0rem;
+}
+
+.footer_wrapper .footer-logo img {
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+   
+}
+
+.footer_wrapper h5 {
+    color: var(--light-purple-color);
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    font-weight: 600;   
+    text-transform: capitalize;
+    font-size: 16px;
+}
+
+.footer_wrapper h5 a {
+    color: var(--light-purple-color);
+    font-size: 14px;
+}
+
+.footer_wrapper ul {
+    list-style: none;
+    display: flex;
+   
+    
+}
+
+.footer_wrapper ul li{
+    margin-right: 1rem;
+}
+
+.footer_wrapper img{
+    width: 50px;
+    height: auto;
+    align-items: right;
+}
+
+.footer_wrapper .copyright-section p {
+    margin: 0;
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 14px;
+    font-style: italic;
+}
+
+

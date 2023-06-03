@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--=========== META TAGS ===========-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Bootstrap">
+    <meta name="description" content="Web Design, Subject Courses">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECT ROSE - BLOG</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+
+    <!--======== BOOTSTRAP 5 CDN ========-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!--======= FONT AWESOME 5 CDN ======-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <!--=========== STYLE CSS ===========-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive-style.css">
+</head>
+
+<body class="blog">
+    <!--====== NAVBAR SECTION-START ======-->
+    <header id="full_nav">
+        <div class="header fixed-top">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="blog.html">
+                        <img src="./images/favicon.png" alt="r-logo">
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
+                        aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-stream navbar-toggler-icon"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="main-nav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle"  id="navbarDropdown"role="button">Feature</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="f-webtec.html">Web Technology</a></li>
+                                    <li><a class="dropdown-item" href="f-html.html">HTML</a></li>
+                                    <li><a class="dropdown-item" href="f-css.html">CSS</a></li>
+                                    <li><a class="dropdown-item" href="f-js.html">JAVASCRIPT</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="blog.html">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!--======= NAVBAR SECTION-END =======-->
+
+    <!--=========== BLOG START ===========-->
+    <section class="parallax parallax-main b-img">
+        <div class="main-wrapper wrapper">
+            <div class="container">
+                <div class="row mb-5 justify-content-center">
+                    <div class="col-lg-9">
+                        <div class="sec-title">
+                            <h1>Latest Projects</h1>
+                            <p class="text-white">My Latest Projects showcase the awesome variety of projects I've 
+                                tackled across different subjects. I'm all about embracing fresh challenges and 
+                                unique endeavors that unleash my creativity. Below, you'll find a rundown of my 
+                                recent ventures and how they brought my vision to vibrant life.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+   
+    <!--============ CAROUSEL ============-->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./images/blog/wt_1.jpeg" class="d-block w-100" alt="webtec#1">
+            <div class="carousel-caption d-none d-md-block">
+              <h4>Web Technology Project #1 - Operating Sytems</h4>
+              <p>A static webpage designed for educational purposes, created solely 
+                using HTML and CSS.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./images/blog/wt_2.jpeg" class="d-block w-100" alt="webtec#2">
+            <div class="carousel-caption d-none d-md-block">
+              <h4>Web Technology Project #2 - Project Rose</h4>
+              <p>A website that is both educational and interactive, built with HTML, CSS, 
+                JavaScript, and the Bootstrap 5.1.3 framework, designed to be responsive 
+                and engaging.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./images/blog/oop_1.jpeg" class="d-block w-100" alt="oop#1">
+            <div class="carousel-caption d-none d-md-block">
+                <h4>Object-Oriented Programming Project #1 - Salary Generator</h4>
+                <p>An object-oriented C# program that utilizes the principle of encapsulation to 
+                    calculate salary.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./images/blog/oop_2.jpeg" class="d-block w-100" alt="oop#2">
+            <div class="carousel-caption d-none d-md-block">
+                <h4>Object-Oriented Programming Project #2 - Galactic Runner</h4>
+                <p>Galactic Runner is a C# game that incorporates a login and registration system, 
+                    allowing users to choose between guest or registered play. It effectively 
+                    applies the four principles of Object-Oriented Programming (OOP). The game 
+                    is set in space and presents a platform-style gameplay experience, with a 
+                    variety of space-themed obstacles that pose challenges for the astronaut 
+                    protagonist to overcome in each level.
+                </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./images/blog/copro2_1.jpeg" class="d-block w-100" alt="copro2#1">
+            <div class="carousel-caption d-none d-md-block">
+                <h4>Computer Programming 2 Project #1 - User Control</h4>
+                <p>The compiled C# program encompasses preliminary activities in computer 
+                    programming 2 by utilizing a Winforms User control.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./images/blog/copro2_2.jpeg" class="d-block w-100" alt="copro2#2">
+            <div class="carousel-caption d-none d-md-block">
+                <h4>Computer Programming 2 Project #2 - Score Properties</h4>
+                <p>A C# program utilizing Winforms that emphasizes UI flow and design, calculates 
+                    scores, and determines the resulting grade.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    <!--============ BLOG END ============-->
+    <hr>
+
+    <!--====== FOOTER SECTION-START ======-->
+    <section class="footer_wrapper wrapper">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0 footer-logo">
+                    <img src="./images/favicon.png" />
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
+                    <h5><a href="#">+63 912 345 6789</a></h5>
+                    <h5><a href="https://www.facebook.com/farahD.alva">Ms. Farah Alvarado | Instructor</a></h5>
+                    <h5><a href="https://www.facebook.com/ACTIEFCCS">Asian College of Technology - Main Campus</a></h5>
+                    <h5><a href="#">N. Bacalso cor Leon Kilat St, 6000 Cebu City, Cebu, Philippines</a></h5>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
+                    <ul class="link-widget p-0">
+                        <li><a href="https://www.facebook.com/ACTIEFCCS"><img src="./images/social-media/f.png" /></a></li>
+                        <li><a href="https://www.instagram.com/"><img src="./images/social-media/ig.png" /></a></li>
+                        <li><a href="https://twitter.com/rosesrhjs"><img src="./images/social-media/t.png" /></a></li>
+                        <li><a href="https://mail.google.com/"><img src="./images/social-media/g.png" /></a></li>
+                        <li><a href="https://www.linkedin.com/login"><img src="./images/social-media/li.png" /></a></li>
+                        <li><a href="https://github.com/rosesrhjs"><img src="./images/social-media/gh.png" /></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+       
+        <div class="container-fluid copyright-section">
+            <p>© 2023 ProjectRose. All Rights Reserved</p>
+        </div>
+    </section>
+    <!--======== FOOTER SECTION-END =======-->
+
+    <!--=== Separate Popper and Bootstrap JS ====-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" 
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" 
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+    <!--============= MAIN JS =============-->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
